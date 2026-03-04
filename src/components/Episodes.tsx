@@ -19,7 +19,7 @@ const Episodes = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Next <span className="text-orange-600">Episode</span>
+            Next <span className="text-brand-dark">Episode</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Join us for our next meaningful conversation on Thursday.
@@ -28,11 +28,11 @@ const Episodes = () => {
 
         {/* Upcoming Episode */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border-2 border-orange-200">
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border-2 border-brand-red/20">
             <div className="p-8">
               {/* Episode Status Badge */}
               <div className="flex items-center justify-between mb-4">
-                <span className="px-3 py-1 rounded-full text-sm font-semibold bg-orange-100 text-orange-800">
+                <span className="px-3 py-1 rounded-full text-sm font-semibold bg-brand-yellow/10 text-brand-dark">
                   Upcoming
                 </span>
               </div>
@@ -60,7 +60,7 @@ const Episodes = () => {
               </div>
 
               {/* Action Button */}
-              <button className="w-full bg-orange-600 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+              <button className="w-full bg-brand-red text-white py-3 rounded-lg font-semibold hover:bg-brand-dark transition-colors">
                 Join This Session
               </button>
             </div>
@@ -69,12 +69,12 @@ const Episodes = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-brand-yellow to-brand-red rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">Never Miss an Episode</h3>
             <p className="text-lg mb-6 opacity-90">
               Get notified about upcoming SEMEZANA sessions and be part of the conversation.
             </p>
-            <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-brand-red px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Subscribe to Updates
             </button>
           </div>

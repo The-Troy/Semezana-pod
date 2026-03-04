@@ -10,12 +10,12 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo and Brand */}
           <div className="flex items-center space-x-3">
-            <div className="bg-gradient-to-r from-orange-500 to-red-600 p-2 rounded-lg">
+            <div className="bg-gradient-to-r from-brand-yellow to-brand-red p-2 rounded-lg">
               <Mic className="h-8 w-8 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">SEMEZANA</h1>
-              <p className="text-sm text-orange-600 font-medium">Conversations for Change</p>
+              <h1 className="text-2xl font-bold text-brand-dark">SEMEZANA</h1>
+              <p className="text-sm text-brand-red font-medium">Conversations for Change</p>
             </div>
           </div>
 
@@ -39,7 +39,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-orange-600 transition-colors"
+              className="text-gray-700 hover:text-brand-red transition-colors"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -52,28 +52,28 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <a
                 href="#home"
-                className="text-gray-700 hover:text-orange-600 font-medium transition-colors"
+                className="text-gray-700 hover:text-brand-red font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </a>
               <a
                 href="#about"
-                className="text-gray-700 hover:text-orange-600 font-medium transition-colors"
+                className="text-gray-700 hover:text-brand-red font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </a>
               <a
                 href="#hosts"
-                className="text-gray-700 hover:text-orange-600 font-medium transition-colors"
+                className="text-gray-700 hover:text-brand-red font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Hosts
               </a>
               <a
                 href="#contact"
-                className="text-gray-700 hover:text-orange-600 font-medium transition-colors"
+                className="text-gray-700 hover:text-brand-red font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
