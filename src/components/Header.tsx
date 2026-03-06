@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Menu, X, Mic } from 'lucide-react';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,14 +9,12 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo and Brand */}
-          <div className="flex items-center space-x-3">
-            <div className="bg-gradient-to-r from-brand-yellow to-brand-red p-2 rounded-lg">
-              <Mic className="h-8 w-8 text-white" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-brand-dark">SEMEZANA</h1>
-              <p className="text-sm text-brand-red font-medium">Conversations for Change</p>
-            </div>
+          <div className="flex items-center">
+            <img
+              src="/Semezana%20logo.jpg"
+              alt="SEMEZANA Logo"
+              className="h-14 w-auto object-contain scale-110"
+            />
           </div>
 
           {/* Desktop Navigation */}
