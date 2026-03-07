@@ -3,7 +3,6 @@ import Header from './Header';
 import Hero from './Hero';
 import About from './About';
 import Episodes from './Episodes';
-import Contact from './Contact';
 import Footer from './Footer';
 
 const HomePage: React.FC = () => {
@@ -22,9 +21,6 @@ const HomePage: React.FC = () => {
 
                 {/* Episodes Section - Recent and upcoming episodes */}
                 <Episodes />
-
-                {/* Contact Section - Topic suggestion form */}
-                <Contact />
             </main>
 
             {/* Footer */}

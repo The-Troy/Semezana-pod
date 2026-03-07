@@ -12,11 +12,8 @@ import {
 } from "firebase/firestore";
 
 export interface TopicData {
-    name: string;
     email: string;
     topic: string;
-    urgency: string;
-    description: string;
 }
 
 export interface Topic extends TopicData {
@@ -28,11 +25,20 @@ export interface Topic extends TopicData {
 export const submitTopic = async (data: TopicData) => {
     try {
         const topicsRef = collection(db, "topics");
-        await addDoc(topicsRef, {
+
+        // Wrap addDoc in a timeout Promise to prevent silent hanging
+        const timeoutPromise = new Promise((_, reject) =>
+            setTimeout(() => reject(new Error("Timeout: Could not connect to database. Please make sure the Firestore Database has been created in your Firebase Console.")), 10000)
+        );
+
+        const addDocPromise = addDoc(topicsRef, {
             ...data,
             createdAt: serverTimestamp(),
-            status: "pending" // Initial status
+            status: "pending"
         });
+
+        await Promise.race([addDocPromise, timeoutPromise]);
+
         return { success: true };
     } catch (error) {
         console.error("Error submitting topic:", error);

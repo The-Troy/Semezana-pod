@@ -61,15 +61,6 @@ const TopicsList: React.FC = () => {
         });
     };
 
-    const getUrgencyColor = (urgency: string) => {
-        const colors = {
-            low: 'text-green-400',
-            medium: 'text-yellow-400',
-            high: 'text-red-400'
-        };
-        return colors[urgency as keyof typeof colors] || 'text-gray-400';
-    };
-
     const filteredTopics = filter === 'all'
         ? topics
         : topics.filter(topic => topic.status === filter);
@@ -94,8 +85,8 @@ const TopicsList: React.FC = () => {
                         key={status}
                         onClick={() => setFilter(status)}
                         className={`px-4 py-2 rounded-lg font-medium transition ${filter === status
-                                ? 'bg-purple-600 text-white'
-                                : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
+                            ? 'bg-purple-600 text-white'
+                            : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
                             }`}
                     >
                         {status.charAt(0).toUpperCase() + status.slice(1)}
@@ -135,10 +126,6 @@ const TopicsList: React.FC = () => {
                                     </div>
                                     <div className="flex items-center gap-4 text-sm text-gray-400">
                                         <span className="flex items-center gap-1">
-                                            <User className="w-4 h-4" />
-                                            {topic.name}
-                                        </span>
-                                        <span className="flex items-center gap-1">
                                             <Mail className="w-4 h-4" />
                                             {topic.email}
                                         </span>
@@ -148,13 +135,7 @@ const TopicsList: React.FC = () => {
                                         </span>
                                     </div>
                                 </div>
-                                <div className={`text-sm font-medium ${getUrgencyColor(topic.urgency)}`}>
-                                    {topic.urgency.toUpperCase()}
-                                </div>
                             </div>
-
-                            {/* Description */}
-                            <p className="text-gray-300 mb-4 leading-relaxed">{topic.description}</p>
 
                             {/* Actions */}
                             <div className="flex gap-2">

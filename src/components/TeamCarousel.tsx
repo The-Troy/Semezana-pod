@@ -65,13 +65,13 @@ const TeamCarousel = () => {
 
     return (
         <div
-            className="relative w-full overflow-hidden bg-[#fdfaf7] py-24 flex items-center justify-center font-sans"
+            className="relative w-full overflow-hidden bg-zinc-950 py-24 flex items-center justify-center font-sans"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
             {/* Background Title Mask */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-                <h2 className="text-[15vw] font-black leading-none text-[#8c6239] opacity-10 uppercase tracking-tighter mix-blend-multiply text-center">
+                <h2 className="text-[15vw] font-black leading-none text-white/5 opacity-50 uppercase tracking-tighter mix-blend-screen text-center">
                     OUR TEAM
                 </h2>
             </div>
@@ -116,7 +116,7 @@ const TeamCarousel = () => {
                             <div
                                 key={member.id}
                                 style={cardStyle}
-                                className="absolute w-[300px] h-[400px] sm:w-[350px] sm:h-[450px] flex flex-col items-center justify-end rounded-2xl shadow-2xl overflow-hidden bg-white/50 backdrop-blur-sm group"
+                                className="absolute w-[260px] h-[360px] sm:w-[300px] sm:h-[400px] md:w-[350px] md:h-[450px] max-w-[90vw] flex flex-col items-center justify-end rounded-2xl shadow-2xl overflow-hidden bg-white/50 backdrop-blur-sm group"
                                 onClick={() => !isCenter && goToSlide(index)}
                             >
                                 {/* Image Background */}
@@ -127,7 +127,7 @@ const TeamCarousel = () => {
 
                                 {/* Text Gradient Overlay - Only fully visible on center card */}
                                 <div
-                                    className={`absolute inset-0 bg-gradient-to-t from-[#8c6239]/90 via-[#8c6239]/20 to-transparent transition-opacity duration-[800ms] ${isCenter ? 'opacity-100' : 'opacity-0'
+                                    className={`absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/40 to-transparent transition-opacity duration-[800ms] ${isCenter ? 'opacity-100' : 'opacity-0'
                                         }`}
                                 />
 
@@ -141,7 +141,7 @@ const TeamCarousel = () => {
                                     <h3 className="text-2xl font-bold text-white mb-1">
                                         {member.name}
                                     </h3>
-                                    <p className="text-[#fdfaf7]/90 font-medium uppercase tracking-wider text-sm">
+                                    <p className="text-brand-yellow font-medium uppercase tracking-wider text-sm">
                                         {member.role}
                                     </p>
                                 </div>
@@ -154,7 +154,7 @@ const TeamCarousel = () => {
                 <div className="absolute top-1/2 -translate-y-1/2 left-4 md:left-8 z-40">
                     <button
                         onClick={prevSlide}
-                        className="w-12 h-12 flex items-center justify-center rounded-full bg-[#8c6239] text-[#fdfaf7] hover:bg-[#735030] transition-colors shadow-lg"
+                        className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-red text-white hover:bg-brand-dark transition-colors shadow-lg"
                         aria-label="Previous team member"
                     >
                         <ChevronLeft className="w-6 h-6" />
@@ -164,7 +164,7 @@ const TeamCarousel = () => {
                 <div className="absolute top-1/2 -translate-y-1/2 right-4 md:right-8 z-40">
                     <button
                         onClick={nextSlide}
-                        className="w-12 h-12 flex items-center justify-center rounded-full bg-[#8c6239] text-[#fdfaf7] hover:bg-[#735030] transition-colors shadow-lg"
+                        className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-red text-white hover:bg-brand-dark transition-colors shadow-lg"
                         aria-label="Next team member"
                     >
                         <ChevronRight className="w-6 h-6" />
@@ -178,8 +178,8 @@ const TeamCarousel = () => {
                             key={index}
                             onClick={() => goToSlide(index)}
                             className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeIndex
-                                ? 'bg-[#8c6239] scale-125'
-                                : 'bg-[#8c6239]/30 hover:bg-[#8c6239]/50'
+                                ? 'bg-brand-red scale-125'
+                                : 'bg-brand-red/30 hover:bg-brand-red/50'
                                 }`}
                             aria-label={`Go to slide ${index + 1}`}
                         />
