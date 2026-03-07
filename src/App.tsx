@@ -1,35 +1,35 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Episodes from './components/Episodes';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import Login from './components/admin/Login';
+import AdminDashboard from './components/admin/AdminDashboard';
+import ProtectedRoute from './components/admin/ProtectedRoute';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      {/* Navigation Header */}
-      <Header />
-      
-      {/* Main Content Sections */}
-      <main>
-        {/* Hero Section - Landing area with main branding */}
-        <Hero />
-        
-        {/* About Section - Information about SEMEZANA and hosts */}
-        <About />
-        
-        {/* Episodes Section - Recent and upcoming episodes */}
-        <Episodes />
-        
-        {/* Contact Section - Topic suggestion form */}
-        <Contact />
-      </main>
-      
-      {/* Footer */}
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        {/* Public Routes */}
+        <Route path="/" element={<HomePage />} />
+
+        {/* Admin Routes */}
+        <Route path="/admin/login" element={<Login />} />
+        <Route
+          path="/admin/dashboard"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Redirect /admin to /admin/login */}
+        <Route path="/admin" element={<Navigate to="/admin/login" replace />} />
+
+        {/* Catch all - redirect to home */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
   );
 }
 
