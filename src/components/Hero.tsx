@@ -19,7 +19,7 @@ const Hero = () => {
         }}
         className="relative flex flex-col gap-6 items-center justify-center px-4 max-w-4xl text-center"
       >
-        <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
+        <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#E31E24] tracking-tight">
           Conversations for Change
         </div>
         <div className="font-light text-lg md:text-2xl text-neutral-200 py-2 leading-relaxed max-w-2xl mx-auto">
@@ -29,7 +29,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
           <Button
             size="lg"
-            className="bg-white text-zinc-950 hover:bg-zinc-200 rounded-full font-semibold px-8 h-12 text-base"
+            className="bg-[#E31E24] text-white hover:bg-[#b81a1f] rounded-full font-semibold px-8 h-12 text-base transition-colors"
             onClick={handleJoinClick}
           >
             Join Next Session

@@ -1,4 +1,4 @@
-import { Mic, Mail, Calendar, Heart } from 'lucide-react';
+import { Mic, Mail, Calendar, Heart, Instagram, Twitter, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -72,13 +72,30 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-white/5 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-zinc-500 text-sm mb-4 md:mb-0">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+            <div className="text-zinc-500 text-sm text-center lg:text-left">
               © 2025 SEMEZANA. All rights reserved. Built with passion for meaningful conversations.
             </div>
-            <div className="flex items-center space-x-6 text-sm text-zinc-500">
-              <span>Hosted by Devlins Jeremiah Muuo & Meek Amani</span>
+
+            {/* Social Media Links */}
+            <div className="flex space-x-5">
+              <a href="https://www.instagram.com/s_emezana?igsh=MTh0NW5sdzJuYWF0Ng==" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-[#E31E24] transition-colors" aria-label="Instagram">
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a href="https://www.tiktok.com/@s_emezana?_r=1&_t=ZM-933xKnrG9Vr" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-[#E31E24] transition-colors" aria-label="TikTok">
+                <svg fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6">
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.12-3.44-3.17-3.8-5.46-.4-2.46.33-5.06 1.95-6.9 1.48-1.66 3.66-2.6 5.86-2.58l.05 4.26c-1.29.07-2.6.72-3.23 1.86-.68 1.1-.64 2.61.05 3.66.75 1.1 2.21 1.56 3.51 1.05 1.1-.42 1.81-1.49 1.86-2.67.09-3.95.05-7.91.04-11.86.01-1.46.01-2.92.01-4.38z" />
+                </svg>
+              </a>
+              <a href="https://x.com/s_emezana?s=21" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-[#E31E24] transition-colors" aria-label="X / Twitter">
+                <Twitter className="h-6 w-6" />
+              </a>
+              <a href="https://youtube.com/@semezanalive?si=CWvlrvfKqJyTXabN" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-[#E31E24] transition-colors" aria-label="YouTube">
+                <Youtube className="h-6 w-6" />
+              </a>
             </div>
+
+
           </div>
         </div>
       </div>
